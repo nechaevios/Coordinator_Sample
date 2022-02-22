@@ -12,7 +12,17 @@
 		D826E7E427C15A7C00645BCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826E7E327C15A7C00645BCD /* SceneDelegate.swift */; };
 		D826E7EB27C15A7C00645BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D826E7EA27C15A7C00645BCD /* Assets.xcassets */; };
 		D826E7EE27C15A7C00645BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D826E7EC27C15A7C00645BCD /* LaunchScreen.storyboard */; };
-		D8E30F4927C40556009CF7C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E30F4827C40556009CF7C2 /* MainViewController.swift */; };
+		D82AF29027C4EB0100572EE1 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82AF28F27C4EB0100572EE1 /* TabBarCoordinator.swift */; };
+		D82AF29327C4EB9E00572EE1 /* ReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82AF29227C4EB9E00572EE1 /* ReadyViewController.swift */; };
+		D82AF29627C4EC8700572EE1 /* SteadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82AF29527C4EC8700572EE1 /* SteadyViewController.swift */; };
+		D82AF29927C4ECFD00572EE1 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82AF29827C4ECFD00572EE1 /* StartViewController.swift */; };
+		D82AF29C27C5231800572EE1 /* ReadyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82AF29B27C5231800572EE1 /* ReadyCoordinator.swift */; };
+		D82AF2A027C5392100572EE1 /* RegistrationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82AF29F27C5392100572EE1 /* RegistrationFlowCoordinator.swift */; };
+		D8E30F4927C40556009CF7C2 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E30F4827C40556009CF7C2 /* RegistrationViewController.swift */; };
+		D8FE827927C41E350018CAF5 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE827827C41E350018CAF5 /* CoordinatorProtocol.swift */; };
+		D8FE827B27C41F690018CAF5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE827A27C41F690018CAF5 /* AppCoordinator.swift */; };
+		D8FE827E27C421090018CAF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE827D27C421090018CAF5 /* LoginViewController.swift */; };
+		D8FE828027C4213F0018CAF5 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE827F27C4213F0018CAF5 /* LoginCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +35,17 @@
 		D826E7EA27C15A7C00645BCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D826E7ED27C15A7C00645BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D826E7EF27C15A7C00645BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8E30F4827C40556009CF7C2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D82AF28F27C4EB0100572EE1 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		D82AF29227C4EB9E00572EE1 /* ReadyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyViewController.swift; sourceTree = "<group>"; };
+		D82AF29527C4EC8700572EE1 /* SteadyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteadyViewController.swift; sourceTree = "<group>"; };
+		D82AF29827C4ECFD00572EE1 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		D82AF29B27C5231800572EE1 /* ReadyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyCoordinator.swift; sourceTree = "<group>"; };
+		D82AF29F27C5392100572EE1 /* RegistrationFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFlowCoordinator.swift; sourceTree = "<group>"; };
+		D8E30F4827C40556009CF7C2 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		D8FE827827C41E350018CAF5 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		D8FE827A27C41F690018CAF5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D8FE827D27C421090018CAF5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D8FE827F27C4213F0018CAF5 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,12 +90,57 @@
 		D826E7E027C15A7C00645BCD /* Coordinator_Sample */ = {
 			isa = PBXGroup;
 			children = (
-				D8E30F4B27C40810009CF7C2 /* MainView */,
+				D8E30F4B27C40810009CF7C2 /* RegistrationView */,
+				D82AF29727C4ECEE00572EE1 /* StartView */,
+				D82AF29427C4EC7700572EE1 /* SteadyView */,
+				D82AF29127C4EB8100572EE1 /* ReadyView */,
+				D8FE827C27C420FA0018CAF5 /* LoginView */,
+				D8FE827527C41D940018CAF5 /* Coordinators */,
 				D8E30F4A27C407FD009CF7C2 /* App */,
 				D8E30F4C27C40819009CF7C2 /* Resources */,
 				D826E7EF27C15A7C00645BCD /* Info.plist */,
 			);
 			path = Coordinator_Sample;
+			sourceTree = "<group>";
+		};
+		D82AF29127C4EB8100572EE1 /* ReadyView */ = {
+			isa = PBXGroup;
+			children = (
+				D82AF29227C4EB9E00572EE1 /* ReadyViewController.swift */,
+			);
+			path = ReadyView;
+			sourceTree = "<group>";
+		};
+		D82AF29427C4EC7700572EE1 /* SteadyView */ = {
+			isa = PBXGroup;
+			children = (
+				D82AF29527C4EC8700572EE1 /* SteadyViewController.swift */,
+			);
+			path = SteadyView;
+			sourceTree = "<group>";
+		};
+		D82AF29727C4ECEE00572EE1 /* StartView */ = {
+			isa = PBXGroup;
+			children = (
+				D82AF29827C4ECFD00572EE1 /* StartViewController.swift */,
+			);
+			path = StartView;
+			sourceTree = "<group>";
+		};
+		D82AF29A27C520FA00572EE1 /* CoordinatorProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				D8FE827827C41E350018CAF5 /* CoordinatorProtocol.swift */,
+			);
+			path = CoordinatorProtocol;
+			sourceTree = "<group>";
+		};
+		D82AF29D27C5387A00572EE1 /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D8FE827A27C41F690018CAF5 /* AppCoordinator.swift */,
+			);
+			path = AppCoordinator;
 			sourceTree = "<group>";
 		};
 		D8E30F4A27C407FD009CF7C2 /* App */ = {
@@ -88,12 +153,12 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		D8E30F4B27C40810009CF7C2 /* MainView */ = {
+		D8E30F4B27C40810009CF7C2 /* RegistrationView */ = {
 			isa = PBXGroup;
 			children = (
-				D8E30F4827C40556009CF7C2 /* MainViewController.swift */,
+				D8E30F4827C40556009CF7C2 /* RegistrationViewController.swift */,
 			);
-			path = MainView;
+			path = RegistrationView;
 			sourceTree = "<group>";
 		};
 		D8E30F4C27C40819009CF7C2 /* Resources */ = {
@@ -102,6 +167,27 @@
 				D826E7EA27C15A7C00645BCD /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D8FE827527C41D940018CAF5 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				D82AF29A27C520FA00572EE1 /* CoordinatorProtocol */,
+				D82AF29D27C5387A00572EE1 /* AppCoordinator */,
+				D8FE827F27C4213F0018CAF5 /* LoginCoordinator.swift */,
+				D82AF29B27C5231800572EE1 /* ReadyCoordinator.swift */,
+				D82AF28F27C4EB0100572EE1 /* TabBarCoordinator.swift */,
+				D82AF29F27C5392100572EE1 /* RegistrationFlowCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		D8FE827C27C420FA0018CAF5 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				D8FE827D27C421090018CAF5 /* LoginViewController.swift */,
+			);
+			path = LoginView;
 			sourceTree = "<group>";
 		};
 		DC5EBB20705BB930D2B88E09 /* Frameworks */ = {
@@ -217,7 +303,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint autocorrect && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -226,8 +312,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8E30F4927C40556009CF7C2 /* MainViewController.swift in Sources */,
+				D82AF29327C4EB9E00572EE1 /* ReadyViewController.swift in Sources */,
+				D82AF29627C4EC8700572EE1 /* SteadyViewController.swift in Sources */,
+				D8FE827E27C421090018CAF5 /* LoginViewController.swift in Sources */,
+				D8E30F4927C40556009CF7C2 /* RegistrationViewController.swift in Sources */,
+				D82AF29927C4ECFD00572EE1 /* StartViewController.swift in Sources */,
+				D82AF2A027C5392100572EE1 /* RegistrationFlowCoordinator.swift in Sources */,
+				D8FE828027C4213F0018CAF5 /* LoginCoordinator.swift in Sources */,
 				D826E7E227C15A7C00645BCD /* AppDelegate.swift in Sources */,
+				D82AF29027C4EB0100572EE1 /* TabBarCoordinator.swift in Sources */,
+				D8FE827B27C41F690018CAF5 /* AppCoordinator.swift in Sources */,
+				D8FE827927C41E350018CAF5 /* CoordinatorProtocol.swift in Sources */,
+				D82AF29C27C5231800572EE1 /* ReadyCoordinator.swift in Sources */,
 				D826E7E427C15A7C00645BCD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
