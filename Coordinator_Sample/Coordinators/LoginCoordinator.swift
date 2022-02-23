@@ -36,6 +36,8 @@ class LoginCoordinator: LoginCoordinatorProtocol {
 
     func showLoginViewController() {
         let loginVC = LoginViewController()
+        loginVC.navigationItem.title = "LogIn"
+        navigationController.navigationBar.prefersLargeTitles = true
 
         loginVC.didSendEventClosure = { [weak self] eventType in
             switch eventType {
@@ -48,6 +50,6 @@ class LoginCoordinator: LoginCoordinatorProtocol {
             }
         }
 
-        navigationController.pushViewController(loginVC, animated: true)
+        navigationController.pushViewController(loginVC, animated: false)
     }
 }

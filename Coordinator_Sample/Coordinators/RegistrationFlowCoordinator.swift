@@ -47,6 +47,6 @@ class RegistrationFlowCoordinator: RegistrationFlowCoordinatorProtocol {
 
         }
 
-        navigationController.pushViewController(registrationViewController, animated: true)
+        navigationController.pushViewController(registrationViewController, animated: false)
     }
 }

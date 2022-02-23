@@ -138,7 +138,7 @@ class TabCoordinator: NSObject, Coordinator {
                 }
             }
 
-            navController.pushViewController(readyVC, animated: true)
+            navController.pushViewController(readyVC, animated: false)
         case .steady:
             let steadyVC = SteadyViewController()
             steadyVC.didSendEventClosure = { [weak self] event in
@@ -148,7 +148,7 @@ class TabCoordinator: NSObject, Coordinator {
                 }
             }
 
-            navController.pushViewController(steadyVC, animated: true)
+            navController.pushViewController(steadyVC, animated: false)
         case .start:
             let startVC = StartViewController()
             startVC.didSendEventClosure = { [weak self] event in
@@ -158,7 +158,7 @@ class TabCoordinator: NSObject, Coordinator {
                 }
             }
 
-            navController.pushViewController(startVC, animated: true)
+            navController.pushViewController(startVC, animated: false)
         }
 
         return navController

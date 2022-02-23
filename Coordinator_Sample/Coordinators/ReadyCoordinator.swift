@@ -28,7 +28,7 @@ class ReadyCoordinator: ReadyCoordinatorProtocol {
 
     func showReadyViewController() {
         let localVC = RegistrationViewController()
-        navigationController.pushViewController(localVC, animated: true)
+        navigationController.pushViewController(localVC, animated: false)
     }
 
     required init(_ navigationController: UINavigationController) {
@@ -44,7 +44,7 @@ extension ReadyCoordinator: CoordinatorFinishDelegate {
         switch childCoordinator.type {
         case .registration:
             navigationController.viewControllers.removeAll()
-            navigationController.pushViewController(LoginViewController(), animated: true)
+            navigationController.pushViewController(LoginViewController(), animated: false)
         default:
             break
         }
