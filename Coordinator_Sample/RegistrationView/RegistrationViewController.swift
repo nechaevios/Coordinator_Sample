@@ -7,33 +7,17 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController: UIViewController, UISetupProtocol {
 
     var didSendEventClosure: ((RegistrationViewController.Event) -> Void)?
 
-    let testLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Enter your name"
-        label.textColor = .blue
-        label.textAlignment = .center
-        return label
-    }()
-
-    private let cancelButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Cancel", for: .normal)
-        button.backgroundColor = .systemBlue
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 8.0
-
-        return button
-    }()
+    private lazy var cancelButton = createUIButton(withTitle: "Cancel", andColor: .systemRed)
+    private lazy var textLabel = createUILabel(with: "Enter Your Name", color: .black, alignment: .center)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        addButtonsTargets()
         setConstraints()
     }
 
@@ -45,34 +29,39 @@ class RegistrationViewController: UIViewController {
         didSendEventClosure?(.cancel)
     }
 
+}
+
+extension RegistrationViewController {
+    // MARK: - - Setup Events
+
+    enum Event {
+        case cancel
+    }
+
+    // MARK: - - Setup UI
+
     private func setupUI() {
         view.backgroundColor = .white
-        view.addSubview(testLabel)
+        view.addSubview(textLabel)
         view.addSubview(cancelButton)
+    }
 
+    private func addButtonsTargets() {
         cancelButton.addTarget(self, action: #selector(didTapCancelButton(_:)), for: .touchUpInside)
-
     }
 
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            testLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 106),
-            testLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            testLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+            textLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 106),
+            textLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            textLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])
 
         NSLayoutConstraint.activate([
             cancelButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            cancelButton.topAnchor.constraint(equalTo: testLabel.bottomAnchor, constant: 20),
+            cancelButton.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 20),
             cancelButton.widthAnchor.constraint(equalToConstant: 200),
             cancelButton.heightAnchor.constraint(equalToConstant: 50)
         ])
-    }
-
-}
-
-extension RegistrationViewController {
-    enum Event {
-        case cancel
     }
 }

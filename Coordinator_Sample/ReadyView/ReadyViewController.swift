@@ -7,35 +7,23 @@
 
 import UIKit
 
-class ReadyViewController: UIViewController {
+class ReadyViewController: UIViewController, UISetupProtocol {
 
     var didSendEventClosure: ((ReadyViewController.Event) -> Void)?
 
-    private let nextButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Tab Coordinator - next, Ready", for: .normal)
-        button.backgroundColor = .systemRed
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 8.0
-        button.translatesAutoresizingMaskIntoConstraints = false
-
-        return button
-    }()
-
-    private let localSceneButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Ready Coordinator - Settings", for: .normal)
-        button.backgroundColor = .systemBlue
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 8.0
-        button.translatesAutoresizingMaskIntoConstraints = false
-
-        return button
-    }()
+    private lazy var nextButton = createUIButton(
+        withTitle: "Tab Coordinator - next, Ready",
+        andColor: .systemRed
+    )
+    private lazy var localSceneButton = createUIButton(
+        withTitle: "Ready Coordinator - Settings",
+        andColor: .systemOrange
+    )
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        addButtonTargets()
         setConstraints()
     }
 
@@ -43,10 +31,31 @@ class ReadyViewController: UIViewController {
         print("ReadyViewController deinit")
     }
 
+    @objc private func didTapNextButton(_ sender: Any) {
+        didSendEventClosure?(.ready)
+    }
+
+    @objc private func didTapLocalSceneButton(_ sender: Any) {
+//        didSendEventClosure?(.localFromReady)
+    }
+}
+
+extension ReadyViewController {
+    // MARK: - - Setup Events
+
+    enum Event {
+        case ready
+    }
+
+    // MARK: - - Setup UI
+
     private func setupUI() {
         view.backgroundColor = .white
         view.addSubview(nextButton)
         view.addSubview(localSceneButton)
+    }
+
+    private func addButtonTargets() {
         nextButton.addTarget(self, action: #selector(didTapNextButton(_:)), for: .touchUpInside)
         localSceneButton.addTarget(self, action: #selector(didTapLocalSceneButton(_:)), for: .touchUpInside)
     }
@@ -65,21 +74,6 @@ class ReadyViewController: UIViewController {
             localSceneButton.widthAnchor.constraint(equalToConstant: 300),
             localSceneButton.heightAnchor.constraint(equalToConstant: 50)
         ])
-    }
-
-    @objc private func didTapNextButton(_ sender: Any) {
-        didSendEventClosure?(.ready)
-    }
-
-    @objc private func didTapLocalSceneButton(_ sender: Any) {
-//        didSendEventClosure?(.localFromReady)
-    }
-}
-
-extension ReadyViewController {
-    enum Event {
-        case ready
-//        case localFromReady
     }
 
 }

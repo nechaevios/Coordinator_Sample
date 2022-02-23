@@ -18,6 +18,7 @@
 		D82AF29927C4ECFD00572EE1 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82AF29827C4ECFD00572EE1 /* StartViewController.swift */; };
 		D82AF29C27C5231800572EE1 /* ReadyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82AF29B27C5231800572EE1 /* ReadyCoordinator.swift */; };
 		D82AF2A027C5392100572EE1 /* RegistrationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82AF29F27C5392100572EE1 /* RegistrationFlowCoordinator.swift */; };
+		D82AF2A427C655AD00572EE1 /* UISetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82AF2A327C655AD00572EE1 /* UISetupProtocol.swift */; };
 		D8E30F4927C40556009CF7C2 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E30F4827C40556009CF7C2 /* RegistrationViewController.swift */; };
 		D8FE827927C41E350018CAF5 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE827827C41E350018CAF5 /* CoordinatorProtocol.swift */; };
 		D8FE827B27C41F690018CAF5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE827A27C41F690018CAF5 /* AppCoordinator.swift */; };
@@ -41,6 +42,7 @@
 		D82AF29827C4ECFD00572EE1 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		D82AF29B27C5231800572EE1 /* ReadyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyCoordinator.swift; sourceTree = "<group>"; };
 		D82AF29F27C5392100572EE1 /* RegistrationFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFlowCoordinator.swift; sourceTree = "<group>"; };
+		D82AF2A327C655AD00572EE1 /* UISetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISetupProtocol.swift; sourceTree = "<group>"; };
 		D8E30F4827C40556009CF7C2 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		D8FE827827C41E350018CAF5 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		D8FE827A27C41F690018CAF5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -91,10 +93,11 @@
 			isa = PBXGroup;
 			children = (
 				D8E30F4B27C40810009CF7C2 /* RegistrationView */,
+				D8FE827C27C420FA0018CAF5 /* LoginView */,
 				D82AF29727C4ECEE00572EE1 /* StartView */,
 				D82AF29427C4EC7700572EE1 /* SteadyView */,
 				D82AF29127C4EB8100572EE1 /* ReadyView */,
-				D8FE827C27C420FA0018CAF5 /* LoginView */,
+				D82AF2A527C656C700572EE1 /* Protocols */,
 				D8FE827527C41D940018CAF5 /* Coordinators */,
 				D8E30F4A27C407FD009CF7C2 /* App */,
 				D8E30F4C27C40819009CF7C2 /* Resources */,
@@ -143,6 +146,23 @@
 			path = AppCoordinator;
 			sourceTree = "<group>";
 		};
+		D82AF2A227C6559800572EE1 /* UIProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				D82AF2A327C655AD00572EE1 /* UISetupProtocol.swift */,
+			);
+			path = UIProtocols;
+			sourceTree = "<group>";
+		};
+		D82AF2A527C656C700572EE1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D82AF29A27C520FA00572EE1 /* CoordinatorProtocol */,
+				D82AF2A227C6559800572EE1 /* UIProtocols */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		D8E30F4A27C407FD009CF7C2 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,7 +192,6 @@
 		D8FE827527C41D940018CAF5 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				D82AF29A27C520FA00572EE1 /* CoordinatorProtocol */,
 				D82AF29D27C5387A00572EE1 /* AppCoordinator */,
 				D8FE827F27C4213F0018CAF5 /* LoginCoordinator.swift */,
 				D82AF29B27C5231800572EE1 /* ReadyCoordinator.swift */,
@@ -323,6 +342,7 @@
 				D82AF29027C4EB0100572EE1 /* TabBarCoordinator.swift in Sources */,
 				D8FE827B27C41F690018CAF5 /* AppCoordinator.swift in Sources */,
 				D8FE827927C41E350018CAF5 /* CoordinatorProtocol.swift in Sources */,
+				D82AF2A427C655AD00572EE1 /* UISetupProtocol.swift in Sources */,
 				D82AF29C27C5231800572EE1 /* ReadyCoordinator.swift in Sources */,
 				D826E7E427C15A7C00645BCD /* SceneDelegate.swift in Sources */,
 			);

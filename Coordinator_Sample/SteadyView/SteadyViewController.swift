@@ -7,37 +7,18 @@
 
 import UIKit
 
-class SteadyViewController: UIViewController {
+class SteadyViewController: UIViewController, UISetupProtocol {
 
     var didSendEventClosure: ((SteadyViewController.Event) -> Void)?
 
-    private let nextButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Steady", for: .normal)
-        button.backgroundColor = .systemOrange
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 8.0
-
-        return button
-    }()
+    private lazy var nextButton = createUIButton(withTitle: "Steady", andColor: .systemOrange)
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
-
-        view.addSubview(nextButton)
-
-        nextButton.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            nextButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            nextButton.widthAnchor.constraint(equalToConstant: 200),
-            nextButton.heightAnchor.constraint(equalToConstant: 50)
-        ])
-
-        nextButton.addTarget(self, action: #selector(didTapNextButton(_:)), for: .touchUpInside)
+        setupUI()
+        addButtonsTargets()
+        setupConstraints()
     }
 
     deinit {
@@ -50,8 +31,29 @@ class SteadyViewController: UIViewController {
 }
 
 extension SteadyViewController {
+    // MARK: - - Setup Events
+
     enum Event {
         case steady
     }
 
+    // MARK: - - Setup UI
+
+    private func setupUI() {
+        view.backgroundColor = .white
+        view.addSubview(nextButton)
+    }
+
+    private func addButtonsTargets() {
+        nextButton.addTarget(self, action: #selector(didTapNextButton(_:)), for: .touchUpInside)
+    }
+
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            nextButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            nextButton.widthAnchor.constraint(equalToConstant: 200),
+            nextButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
 }
