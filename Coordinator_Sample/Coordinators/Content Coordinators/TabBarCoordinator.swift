@@ -68,9 +68,7 @@ protocol TabCoordinatorProtocol: Coordinator {
     var tabBarController: UITabBarController { get set }
 
     func selectPage(_ page: TabBarPage)
-
     func setSelectedIndex(_ index: Int)
-
     func currentPage() -> TabBarPage?
 }
 
@@ -78,20 +76,18 @@ class TabCoordinator: NSObject, Coordinator {
     weak var finishDelegate: CoordinatorFinishDelegate?
 
     var childCoordinators: [Coordinator] = []
-
     var navigationController: UINavigationController
-
     var tabBarController: UITabBarController
-
     var type: CoordinatorType { .tab }
 
     required init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
+        self.navigationController.navigationBar.prefersLargeTitles = true
         self.tabBarController = .init()
     }
 
     func start() {
-        // Let's define which pages do we want to add into tab bar
+        // Define which pages do we want to add into tab bar
         let pages: [TabBarPage] = [.start, .steady, .ready]
             .sorted(by: { $0.pageOrderNumber() < $1.pageOrderNumber() })
 
@@ -108,12 +104,14 @@ class TabCoordinator: NSObject, Coordinator {
     private func prepareTabBarController(withTabControllers tabControllers: [UIViewController]) {
         // Set delegate for UITabBarController
         tabBarController.delegate = self
+
         // Assign page's controllers
         tabBarController.setViewControllers(tabControllers, animated: false)
+
         // Let set index
         tabBarController.selectedIndex = TabBarPage.ready.pageOrderNumber()
+
         // Styling
-//        tabBarController.tabBar.isTranslucent = false
 
         // In this step, we attach tabBarController to navigation controller associated with this coordanator
         navigationController.viewControllers = [tabBarController]
@@ -121,7 +119,6 @@ class TabCoordinator: NSObject, Coordinator {
 
     private func getTabController(_ page: TabBarPage) -> UINavigationController {
         let navController = UINavigationController()
-//        navController.setNavigationBarHidden(false, animated: false)
 
         navController.tabBarItem = UITabBarItem.init(title: page.pageTitleValue(),
                                                      image: page.pageImageValue(),
@@ -131,6 +128,8 @@ class TabCoordinator: NSObject, Coordinator {
         case .ready:
             // If needed: Each tab bar flow can have it's own Coordinator.
             let readyVC = ReadyViewController()
+            readyVC.navigationItem.title = "Ready VC"
+
             readyVC.didSendEventClosure = { [weak self] event in
                 switch event {
                 case .ready:
@@ -141,6 +140,10 @@ class TabCoordinator: NSObject, Coordinator {
             navController.pushViewController(readyVC, animated: false)
         case .steady:
             let steadyVC = SteadyViewController()
+            navController.navigationItem.title = "ll"
+            steadyVC.navigationItem.title = "Steady VC"
+            steadyVC.navigationController?.navigationBar.backgroundColor = .blue
+
             steadyVC.didSendEventClosure = { [weak self] event in
                 switch event {
                 case .steady:
@@ -151,6 +154,8 @@ class TabCoordinator: NSObject, Coordinator {
             navController.pushViewController(steadyVC, animated: false)
         case .start:
             let startVC = StartViewController()
+            startVC.navigationItem.title = "Start VC"
+
             startVC.didSendEventClosure = { [weak self] event in
                 switch event {
                 case .start:

@@ -75,5 +75,4 @@ extension ReadyViewController {
             localSceneButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
-
 }

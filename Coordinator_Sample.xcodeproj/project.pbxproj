@@ -19,6 +19,9 @@
 		D82AF29C27C5231800572EE1 /* ReadyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82AF29B27C5231800572EE1 /* ReadyCoordinator.swift */; };
 		D82AF2A027C5392100572EE1 /* RegistrationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82AF29F27C5392100572EE1 /* RegistrationFlowCoordinator.swift */; };
 		D82AF2A427C655AD00572EE1 /* UISetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82AF2A327C655AD00572EE1 /* UISetupProtocol.swift */; };
+		D82AF2A827C66D2E00572EE1 /* LocalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82AF2A727C66D2E00572EE1 /* LocalDataModel.swift */; };
+		D82AF2AA27C66D4A00572EE1 /* ReadyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82AF2A927C66D4A00572EE1 /* ReadyViewModel.swift */; };
+		D82AF2B027C66E9400572EE1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82AF2AF27C66E9400572EE1 /* SettingsViewController.swift */; };
 		D8E30F4927C40556009CF7C2 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E30F4827C40556009CF7C2 /* RegistrationViewController.swift */; };
 		D8FE827927C41E350018CAF5 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE827827C41E350018CAF5 /* CoordinatorProtocol.swift */; };
 		D8FE827B27C41F690018CAF5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE827A27C41F690018CAF5 /* AppCoordinator.swift */; };
@@ -43,6 +46,9 @@
 		D82AF29B27C5231800572EE1 /* ReadyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyCoordinator.swift; sourceTree = "<group>"; };
 		D82AF29F27C5392100572EE1 /* RegistrationFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFlowCoordinator.swift; sourceTree = "<group>"; };
 		D82AF2A327C655AD00572EE1 /* UISetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISetupProtocol.swift; sourceTree = "<group>"; };
+		D82AF2A727C66D2E00572EE1 /* LocalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataModel.swift; sourceTree = "<group>"; };
+		D82AF2A927C66D4A00572EE1 /* ReadyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyViewModel.swift; sourceTree = "<group>"; };
+		D82AF2AF27C66E9400572EE1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D8E30F4827C40556009CF7C2 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		D8FE827827C41E350018CAF5 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		D8FE827A27C41F690018CAF5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -92,16 +98,13 @@
 		D826E7E027C15A7C00645BCD /* Coordinator_Sample */ = {
 			isa = PBXGroup;
 			children = (
-				D8E30F4B27C40810009CF7C2 /* RegistrationView */,
-				D8FE827C27C420FA0018CAF5 /* LoginView */,
-				D82AF29727C4ECEE00572EE1 /* StartView */,
-				D82AF29427C4EC7700572EE1 /* SteadyView */,
-				D82AF29127C4EB8100572EE1 /* ReadyView */,
-				D82AF2A527C656C700572EE1 /* Protocols */,
+				D82AF2AB27C66DF700572EE1 /* Auth Views */,
+				D82AF2AC27C66E0300572EE1 /* Content Views */,
 				D8FE827527C41D940018CAF5 /* Coordinators */,
+				D82AF2A627C66D0700572EE1 /* Models */,
+				D82AF2A527C656C700572EE1 /* Protocols */,
 				D8E30F4A27C407FD009CF7C2 /* App */,
 				D8E30F4C27C40819009CF7C2 /* Resources */,
-				D826E7EF27C15A7C00645BCD /* Info.plist */,
 			);
 			path = Coordinator_Sample;
 			sourceTree = "<group>";
@@ -109,7 +112,8 @@
 		D82AF29127C4EB8100572EE1 /* ReadyView */ = {
 			isa = PBXGroup;
 			children = (
-				D82AF29227C4EB9E00572EE1 /* ReadyViewController.swift */,
+				D82AF2AE27C66E7C00572EE1 /* Children  */,
+				D82AF2AD27C66E7300572EE1 /* Main */,
 			);
 			path = ReadyView;
 			sourceTree = "<group>";
@@ -146,21 +150,83 @@
 			path = AppCoordinator;
 			sourceTree = "<group>";
 		};
-		D82AF2A227C6559800572EE1 /* UIProtocols */ = {
+		D82AF2A227C6559800572EE1 /* UIProtocol */ = {
 			isa = PBXGroup;
 			children = (
 				D82AF2A327C655AD00572EE1 /* UISetupProtocol.swift */,
 			);
-			path = UIProtocols;
+			path = UIProtocol;
 			sourceTree = "<group>";
 		};
 		D82AF2A527C656C700572EE1 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				D82AF29A27C520FA00572EE1 /* CoordinatorProtocol */,
-				D82AF2A227C6559800572EE1 /* UIProtocols */,
+				D82AF2A227C6559800572EE1 /* UIProtocol */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D82AF2A627C66D0700572EE1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D82AF2A727C66D2E00572EE1 /* LocalDataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D82AF2AB27C66DF700572EE1 /* Auth Views */ = {
+			isa = PBXGroup;
+			children = (
+				D8E30F4B27C40810009CF7C2 /* RegistrationView */,
+				D8FE827C27C420FA0018CAF5 /* LoginView */,
+			);
+			path = "Auth Views";
+			sourceTree = "<group>";
+		};
+		D82AF2AC27C66E0300572EE1 /* Content Views */ = {
+			isa = PBXGroup;
+			children = (
+				D82AF29727C4ECEE00572EE1 /* StartView */,
+				D82AF29427C4EC7700572EE1 /* SteadyView */,
+				D82AF29127C4EB8100572EE1 /* ReadyView */,
+			);
+			path = "Content Views";
+			sourceTree = "<group>";
+		};
+		D82AF2AD27C66E7300572EE1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D82AF29227C4EB9E00572EE1 /* ReadyViewController.swift */,
+				D82AF2A927C66D4A00572EE1 /* ReadyViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D82AF2AE27C66E7C00572EE1 /* Children  */ = {
+			isa = PBXGroup;
+			children = (
+				D82AF2AF27C66E9400572EE1 /* SettingsViewController.swift */,
+			);
+			path = "Children ";
+			sourceTree = "<group>";
+		};
+		D82AF2B127C66EFB00572EE1 /* Auth Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				D8FE827F27C4213F0018CAF5 /* LoginCoordinator.swift */,
+				D82AF29F27C5392100572EE1 /* RegistrationFlowCoordinator.swift */,
+			);
+			path = "Auth Coordinators";
+			sourceTree = "<group>";
+		};
+		D82AF2B227C66F1600572EE1 /* Content Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				D82AF29B27C5231800572EE1 /* ReadyCoordinator.swift */,
+				D82AF28F27C4EB0100572EE1 /* TabBarCoordinator.swift */,
+			);
+			path = "Content Coordinators";
 			sourceTree = "<group>";
 		};
 		D8E30F4A27C407FD009CF7C2 /* App */ = {
@@ -169,6 +235,7 @@
 				D826E7E127C15A7C00645BCD /* AppDelegate.swift */,
 				D826E7E327C15A7C00645BCD /* SceneDelegate.swift */,
 				D826E7EC27C15A7C00645BCD /* LaunchScreen.storyboard */,
+				D826E7EF27C15A7C00645BCD /* Info.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -193,10 +260,8 @@
 			isa = PBXGroup;
 			children = (
 				D82AF29D27C5387A00572EE1 /* AppCoordinator */,
-				D8FE827F27C4213F0018CAF5 /* LoginCoordinator.swift */,
-				D82AF29B27C5231800572EE1 /* ReadyCoordinator.swift */,
-				D82AF28F27C4EB0100572EE1 /* TabBarCoordinator.swift */,
-				D82AF29F27C5392100572EE1 /* RegistrationFlowCoordinator.swift */,
+				D82AF2B127C66EFB00572EE1 /* Auth Coordinators */,
+				D82AF2B227C66F1600572EE1 /* Content Coordinators */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -331,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D82AF2AA27C66D4A00572EE1 /* ReadyViewModel.swift in Sources */,
 				D82AF29327C4EB9E00572EE1 /* ReadyViewController.swift in Sources */,
 				D82AF29627C4EC8700572EE1 /* SteadyViewController.swift in Sources */,
 				D8FE827E27C421090018CAF5 /* LoginViewController.swift in Sources */,
@@ -339,8 +405,10 @@
 				D82AF2A027C5392100572EE1 /* RegistrationFlowCoordinator.swift in Sources */,
 				D8FE828027C4213F0018CAF5 /* LoginCoordinator.swift in Sources */,
 				D826E7E227C15A7C00645BCD /* AppDelegate.swift in Sources */,
+				D82AF2A827C66D2E00572EE1 /* LocalDataModel.swift in Sources */,
 				D82AF29027C4EB0100572EE1 /* TabBarCoordinator.swift in Sources */,
 				D8FE827B27C41F690018CAF5 /* AppCoordinator.swift in Sources */,
+				D82AF2B027C66E9400572EE1 /* SettingsViewController.swift in Sources */,
 				D8FE827927C41E350018CAF5 /* CoordinatorProtocol.swift in Sources */,
 				D82AF2A427C655AD00572EE1 /* UISetupProtocol.swift in Sources */,
 				D82AF29C27C5231800572EE1 /* ReadyCoordinator.swift in Sources */,
@@ -488,7 +556,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RV92NSXQKZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Coordinator_Sample/Info.plist;
+				INFOPLIST_FILE = Coordinator_Sample/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -516,7 +584,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RV92NSXQKZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Coordinator_Sample/Info.plist;
+				INFOPLIST_FILE = Coordinator_Sample/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

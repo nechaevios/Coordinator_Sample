@@ -26,7 +26,7 @@ class AppCoordinator: AppCoordinatorProtocol {
 
     required init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
-        navigationController.setNavigationBarHidden(false, animated: false)
+//        navigationController.setNavigationBarHidden(false, animated: false)
     }
 
     func start() {
